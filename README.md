@@ -147,21 +147,18 @@ java -jar target/edu-platform-0.0.1-SNAPSHOT.jar
 docker compose up --build
 ````
 Что произойдет:
-- 
-Поднимется контейнер `db` с `postgres:16-alpine`:
-  - 
-БД: `edu_platform`  - 
-Пользователь: `edu`  - 
-Пароль: `secret`
-- 
-Соберётся Docker-образ приложения (`Dockerfile`) и запустится сервис `app`.- 
-Переменные окружения передаются в контейнер `app` (`DB_HOST=db` и т.д.).- 
-Приложение стартует на `http://localhost:8080`.
+- Поднимется контейнер `db` с `postgres:16-alpine`:
+- БД: `edu_platform`  
+- Пользователь: `edu`  
+- Пароль: `secret`
+- Соберётся Docker-образ приложения (`Dockerfile`) и запустится сервис `app`. 
+- Переменные окружения передаются в контейнер `app` (`DB_HOST=db` и т.д.). 
+- Приложение стартнет на `http://localhost:8080`.
 Остановить:
 ````bash
-docker compose down
+docker compose down (либо Ctrl+C)
 ````
-При необходимости очистить данные PostgreSQL:
+База дропнется автоматически при команде down (не для production :))
 ````bash
 docker compose down -v
 ````
