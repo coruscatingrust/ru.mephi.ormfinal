@@ -422,9 +422,8 @@ mvn test
 
 ---
 ## 8. Демонстрационные данные
-При запуске в профиле `dev` автоматически выполняется `DemoDataInitializer`:
-- 
-создаётся:
+
+При запуске в профиле `dev` автоматически выполняется `DemoDataInitializer`, который создает:
   - преподаватель `teacher@example.com` (роль `TEACHER`);  
   - студент `student@example.com` (роль `STUDENT`);  
   - категория `Programming`;  
@@ -433,5 +432,6 @@ mvn test
   - урок `What is ORM`;  
   - задание `First homework`;  
   - квиз `Intro quiz` с вопросом про расшифровку ORM.
+
 Это позволяет сразу проверить работу API без ручного наполнения БД.
 ---
