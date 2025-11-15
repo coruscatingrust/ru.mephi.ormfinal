@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    default: dev
+
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:edu_platform}
+    username: ${DB_USERNAME:edu}
+    password: ${DB_PASSWORD:secret}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: true
+    show-sql: true
+
+  sql:
+    init:
+      mode: never
+
+logging:
+  level:
+    org.hibernate.SQL: info
