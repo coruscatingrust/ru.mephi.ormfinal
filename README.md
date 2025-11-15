@@ -395,10 +395,12 @@ curl -s "$BASE_URL/api/quizzes/submissions/by-quiz/$QUIZ_ID"
 ````bash
 mvn test
 ````
+
 Используется профиль `test` и база H2 (конфигурация в `application-test.yml`):
-- 
-`ddl-auto: create-drop` — схема создаётся перед тестами и удаляется после.- 
+
+- `ddl-auto: create-drop` — схема создаётся перед тестами и удаляется после.- 
 Имитация PostgreSQL через `MODE=PostgreSQL`.
+
 ### 7.2. Интеграционные тесты
 Реализованы базовые интеграционные сценарии:
 ##### `CourseRepositoryIntegrationTest`
